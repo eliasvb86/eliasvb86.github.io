@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<style>
+  .bt1{padding:6px;}
+  .bt2{padding:6px;border-radius:10px;}
+  .bt3{padding:6px;border-radius:50%;}
+  .btr{background-color:red;color:white;}
+  .btx{background-color:white;border:2px solid red;color:red;}
+  .btb{background-color:blue;color:white;width:120px;}
+  .btg{background-color:green;color:white;font-size:1.2em;padding:12px;}
+</style>
 <html>
   <head>
     <title>Box Telegram</title>
@@ -17,6 +26,20 @@
         <li>Fanta</li>
         <li>Fanta</li>
       </ol>
+      <a href="http://laweb.com">Mi botón</a>
+      <hr/>
+      <button class="bt1">Botón 1</button>
+      <hr/>
+      <button class="bt2 btb">Botón 2</button>
+      <hr/>
+      <button class="bt3">Botón 3</button>
+      <hr/>
+      <button class="bt3 btg" onclick="javascript:alert('Contenido del mensaje');">Mensaje</button>
+      <hr/>
+      <button type="button" onclick="javascript:void(window.open('https://pinterest.com/norfipc/'));" title="Síguenos en Pinterest">Pinterest</button>
+      <hr/>
+      <button type="button" onclick="javascript:void(window.open('https://pinterest.com/norfipc/','','width=300,height=200,left=50,top=50,toolbar=yes'));" title="Síguenos en Pinterest">Pinterest</button>
+      <hr/>
     </div>
   </body>
 </html>
