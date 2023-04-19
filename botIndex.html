@@ -61,12 +61,15 @@
   }
 }
 
-
-  
   .bt1 {
     padding: 6px;
     border-radius: 10px;
     width: 100%;
+  }
+  .bt2 {
+    padding: 6px;
+    border-radius: 10px;
+    
   }
   .btc1 {
     background-color: red;
@@ -76,11 +79,11 @@
     /*border: 2px solid red;*/
   }
   .btc2 {
-    background-color: white;
-    color: red;
-    /*font-size: 1.2em;*/
+    background-color: transparent;
+    color: black;
+    font-size: 1.2em;
     /*padding: 12px;*/
-    /*border: 2px solid red;*/
+    border: 0px solid red;
   }
   .btc3 {
     background-color: blue;
@@ -172,23 +175,155 @@
   
   
   <div id="home">
-    <p style="text-align: center;">TIEMPO</p>
-    <hr />
-    
-    <!--onclick="javascript:void(window.open('https://pinterest.com/norfipc/'));" -->
-    
     <button 
+      class="bt1 btc3" 
+      title="TIEMPO" 
+      onclick="javascript:showhide2()"
+      >&#127780; TIEMPO</button>
+    <br/><br/>
+
+  </div>
+
+  <div id="tiempo" style="display: none; width: 100%;">
+    <button 
+      class="bt2 btc2" 
+      title="Volver" 
+      onclick="javascript:showhide1()"
+      style="
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 0;
+        width: 20%;
+      "
+      >&#8666;</button>
+    
+    <p 
+      style="
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 0;
+        width: 59%;
+      ">TIEMPO</p>
+    
+    <br/><br/>
+    <!--<button 
       class="bt1 btc3" 
       title="Avisos AEMET" 
       onclick="javascript:void(window.open('https://pinterest.com/norfipc/'));"
+      >Avisos AEMET</button>-->
+    <div style="display: flex;">
     
-      >Avisos AEMET</button>
-    <br/><br/>
-<button 
+    </div>
+
+    <button 
       class="bt1 btc3" 
       title="Avisos AEMET" 
       onclick="window.location.href='http://infotweet.aemet.es/tu77.html?1517123702';" 
-      >Avisos AEMET</button>
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 47%;
+      ">AVISOS</button>
+    
+    <button 
+      class="bt1 btc3" 
+      title="METEO ALARM" 
+      onclick="window.location.href='https://meteoalarm.org/en/region/ES';" 
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 47%;
+      ">METEO</button>
+    
+    <br/><br/>
+
+    <button 
+      class="bt1 btc3" 
+      title="DGT" 
+      onclick="window.location.href='https://infocar.dgt.es/etraffic/Incidencias?ca=10&provIci=3&caracter=acontecimiento&accion_consultar=Consultar&IncidenciasRETENCION=IncidenciasRETENCION&IncidenciasPUERTOS=IncidenciasPUERTOS&IncidenciasMETEOROLOGICA=IncidenciasMETEOROLOGICA&IncidenciasEVENTOS=IncidenciasEVENTOS&IncidenciasOTROS=IncidenciasOTROS&IncidenciasRESTRICCIONES=IncidenciasRESTRICCIONES&ordenacion=fechahora_ini-DESC';" 
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 97%;
+      ">DGT</button>
+
+    <br/><br/>
+
+    <button 
+      class="bt1 btc3" 
+      title="WINDY" 
+      onclick="window.location.href='https://www.windy.com/38.610/-0.420?radar,38.535,-0.420,11';" 
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 47%;
+      ">WINDY</button>
+    
+    <button 
+      class="bt1 btc3" 
+      title="AEMET" 
+      onclick="window.location.href='http://www.aemet.es/es/eltiempo/prediccion/municipios/torremanzanas-torre-de-les-macanes-la-id03132';" 
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 47%;
+      ">AEMET</button>
+
+    <br/><br/>
+    
+    <button 
+      class="bt1 btc3" 
+      title="AVAMET" 
+      onclick="window.location.href='https://www.avamet.org/mxo-i.php?id=c32m132e01';" 
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 47%;
+      ">AVAMET</button>
+    
+    <button 
+      class="bt1 btc3" 
+      title="WEATHER" 
+      onclick="window.location.href='https://weather.com/es-ES/weather/today/l/d616dce64d8a4b0f200ab3dc9d07f8aac2d82c5908120e911be351d258338fbf';" 
+      style="
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 47%;
+      ">WEATHER</button>
+
+    <br/><br/>
+    
   </div>
   
   <div id="news" class="news">
@@ -249,14 +384,14 @@
   function showhide1() {
     //if ( e1.style.display == "block" ) {e1.style.display = "none";} else {e1.style.display = "block";}
     document.getElementById("home").style.display = 'block';
-    document.getElementById("news").style.display = 'none';
+    document.getElementById("tiempo").style.display = 'none';
     //document.getElementById("myTopnav").className = 'topnav';
     
   }
   function showhide2() {
     //if ( e1.style.display == "block" ) {e1.style.display = "none";} else {e1.style.display = "block";}
     document.getElementById("home").style.display = 'none';
-    document.getElementById("news").style.display = 'block';
+    document.getElementById("tiempo").style.display = 'block';
     //document.getElementById("myTopnav").className = 'topnav';
     
   }
