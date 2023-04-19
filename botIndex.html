@@ -112,6 +112,43 @@
 }
 
 
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 </style>
 
@@ -121,10 +158,11 @@
   <title>Box Telegram</title>
   <header>
     <div class="topnav" id="myTopnav">
-      <a href="javascript:showhide1()" class="active" >Inicio</a>
-      <a href="javascript:showhide2()">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <!--<a id="myTopnava" href="javascript:showhide1()" class="active" >Tiempo</a>-->
+      <a id="myTopnava" href="javascript:showhide1()" >Tiempo</a>
+      <a id="myTopnava" href="javascript:showhide2()">News</a>
+      <a id="myTopnava" href="#contact">Contact</a>
+      <a id="myTopnava" href="#about">About</a>
       <a href="javascript:void(0);" class="icon" onclick="navMenuResponsive()">&#8694;</a>
     </div>
   </header>
@@ -133,10 +171,10 @@
 
 <body>
   
-  <p style="text-align: center;">TIEMPO</p>
   
-  <hr />
   <div id="home">
+    <p style="text-align: center;">TIEMPO</p>
+    <hr />
     
     <!--onclick="javascript:void(window.open('https://pinterest.com/norfipc/'));" -->
     <button class="bt1 btc3" onclick="javascript:alert('Contenido del mensaje');">Mensaje</button>
@@ -147,6 +185,27 @@
       onclick="window.location.href='http://infotweet.aemet.es/tu77.html?1517123702';" 
       >Avisos AEMET</button>
     <br/><br/>
+    
+    
+    <!-- Trigger/Open The Modal -->
+    <button 
+      id="myBtn" 
+      class="bt1 btc3" 
+      title="Windy" 
+      onclick="window.location.href='http://infotweet.aemet.es/tu77.html?1517123702';" 
+      >Windy</button>
+    
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><button id="myBtn2" onclick="window.location.href='http://infotweet.aemet.es/tu77.html?1517123702';">Windy</button></p>
+        
+      </div>
+    </div>
+  
     
   </div>
   
@@ -210,14 +269,42 @@
     document.getElementById("home").style.display = 'block';
     document.getElementById("news").style.display = 'none';
     document.getElementById("myTopnav").className = 'topnav';
+    
   }
   function showhide2() {
     //if ( e1.style.display == "block" ) {e1.style.display = "none";} else {e1.style.display = "block";}
     document.getElementById("home").style.display = 'none';
     document.getElementById("news").style.display = 'block';
     document.getElementById("myTopnav").className = 'topnav';
+    
   }
   
+</script>
+
+  <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function(event) {
+//  if (event.target == modal) {
+//    modal.style.display = "none";
+//  }
+//}
 </script>
 
 </html>
